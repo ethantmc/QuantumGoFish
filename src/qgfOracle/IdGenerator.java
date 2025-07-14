@@ -1,9 +1,9 @@
 package qgfOracle;
 
 public class IdGenerator {
-	private static long nextId = 1;
+	private static Integer nextId = 1;
 
-	public static synchronized long nextPlayerId() {
+	public static synchronized Integer nextPlayerId() {
 		return nextId++;
 	}
 }

@@ -4,15 +4,13 @@ public class QuantumGoFish {
 	public static void main(String[] args) {
 		GameState gameState = new GameState();
 
-		Player alice = new HumanPlayer("Alice");
-		Player bob = new HumanPlayer("Bob");
-		// add players
-		gameState.addPlayer(alice);
-		gameState.addPlayer(bob);
-		// Give each player a card or two (for testing)
-		gameState.getPlayerCount();
-		alice.receiveCard(new Card());
-		bob.receiveCard(new Card(Card.Suit.TWO));
+		gameState.addPlayer(new HumanPlayer("Thomas"));
+		gameState.addPlayer(new HumanPlayer("Logan"));
+		gameState.addPlayer(new HumanPlayer("Ethan"));
+		gameState.addPlayer(new HumanPlayer("Daniel"));
+		CardFactory cardFactory = new CardFactory(() -> gameState.getActiveSuitIds());
+		// give initial hands
+		gameState.dealInitialHands(cardFactory, 4);
 
 		new UI(gameState);
 	}

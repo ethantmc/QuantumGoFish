@@ -1,15 +1,18 @@
 package qgfOracle;
 
 import java.util.HashSet;
+import java.util.Set;
 
 public final class Card {
-	private HashSet<Integer> possibleSuitsbyID = new HashSet<>();
-	public Card(HashSet<Integer> possibleSuitsbyID) {
-		this.addPossibleSuitsbyID(possibleSuitsbyID);
+	private Set<Integer> possibleSuitsbyID = new HashSet<>();
+	public Card(int playerCount) {
+		for (int i = 0; i < playerCount; i++) { this.possibleSuitsbyID.add(i); }
 	}
-
-	public void addPossibleSuitsbyID(HashSet<Integer> possibleSuitsbyID) {
-		this.possibleSuitsbyID.addAll(possibleSuitsbyID);
+	public Card(Set<Integer> set) {
+		this.addPossibleSuitsbyID(set);
+	}
+	public void addPossibleSuitsbyID(Set<Integer> set) {
+		this.possibleSuitsbyID.addAll(set);
 	}
 
 	@Override
@@ -17,7 +20,7 @@ public final class Card {
 		return this == obj; // instance equality only
 	}
 
-	public HashSet<Integer> getPossibleSuitsbyID() {
+	public Set<Integer> getPossibleSuitsbyID() {
 		return possibleSuitsbyID; // not very useful
 	}
 	public boolean isCollapsed() {

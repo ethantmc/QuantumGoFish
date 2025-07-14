@@ -1,15 +1,16 @@
 package qgfOracle;
 
 import java.util.HashSet;
+import java.util.Set;
 
 public class Hand {
-	private HashSet<Card> cards = new HashSet<>();
+	private Set<Card> cards = new HashSet<>();
 
 	public void addCard(Card card) {
 		cards.add(card);
 	}
 
-	public HashSet<Card> getCards() {
+	public Set<Card> getCards() {
 		return cards;
 	}
 
