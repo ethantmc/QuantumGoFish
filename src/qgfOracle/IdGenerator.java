@@ -1,5 +1,8 @@
 package qgfOracle;
-
+/**
+ * @author Ethan Mc Donald
+ *
+ */
 public class IdGenerator {
 	private static Integer nextId = 1;
 

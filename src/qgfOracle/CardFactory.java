@@ -1,5 +1,8 @@
 package qgfOracle;
-
+/**
+ * @author Ethan Mc Donald
+ *
+ */
 import java.util.Set;
 import java.util.function.Supplier;
 

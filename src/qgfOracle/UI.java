@@ -1,5 +1,8 @@
 package qgfOracle;
-
+/**
+ * @author Ethan Mc Donald
+ *
+ */
 import java.awt.BorderLayout;
 import java.util.List;
 import java.util.Set;
@@ -57,6 +60,8 @@ public class UI {
 				JOptionPane.PLAIN_MESSAGE, null, suitIDs, suitIDs[0]);
 
 		if (suitAsked == null) { return; }
+		// TODO: Validate that a player who asks about a suit could have a card
+		// of that suit. If they could not, that's a paradox!
 
 		int response = JOptionPane.showConfirmDialog(frame, selected.getName()
 				+ ", do you have any cards of suit ID " + suitAsked + "?",
@@ -77,7 +82,7 @@ public class UI {
 		else if ((response == JOptionPane.NO_OPTION) && (totalPossible < 4)) {
 			paradox = true; // Not enough cards could possibly be of this suit
 		}
-
+		// TODO: move this if(paradox) to a helper method.
 		if (paradox) {
 			int choice = JOptionPane.showOptionDialog(frame,
 					"A Paradox has been created! Everybody loses!", "PARADOX",

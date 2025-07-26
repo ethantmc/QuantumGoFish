@@ -1,5 +1,8 @@
 package qgfOracle;
-
+/**
+ * @author Ethan Mc Donald
+ *
+ */
 import java.util.UUID;
 
 public class HumanPlayer implements Player {

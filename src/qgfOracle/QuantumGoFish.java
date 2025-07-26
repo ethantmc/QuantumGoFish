@@ -1,5 +1,8 @@
 package qgfOracle;
-
+/**
+ * @author Ethan Mc Donald
+ *
+ */
 public class QuantumGoFish {
 	public static void main(String[] args) {
 		GameState gameState = new GameState();
