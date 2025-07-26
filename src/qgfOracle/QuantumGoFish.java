@@ -8,7 +8,8 @@ public class QuantumGoFish {
 		gameState.addPlayer(new HumanPlayer("Logan"));
 		gameState.addPlayer(new HumanPlayer("Ethan"));
 		gameState.addPlayer(new HumanPlayer("Daniel"));
-		CardFactory cardFactory = new CardFactory(() -> gameState.getActiveSuitIds());
+		CardFactory cardFactory = new CardFactory(
+				() -> gameState.getActiveSuitIds());
 		// give initial hands
 		gameState.dealInitialHands(cardFactory, 4);
 

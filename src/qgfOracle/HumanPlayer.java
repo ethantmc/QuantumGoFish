@@ -14,22 +14,16 @@ public class HumanPlayer implements Player {
 	}
 
 	@Override
-	public Hand getHand() {
-		return hand;
-	}
+	public Hand getHand() { return hand; }
 
 	@Override
-	public PlayerID getID() {
-		return id;
-	}
+	public PlayerID getID() { return id; }
 
 	@Override
-	public String getName() {
-		return name;
-	}
+	public String getName() { return name; }
+	@Override
+	public void receiveCard(Card card) { hand.addCard(card); }
 
 	@Override
-	public void receiveCard(Card card) {
-		hand.addCard(card);
-	}
+	public String toString() { return this.getName(); }
 }

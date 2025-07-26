@@ -10,9 +10,7 @@ import java.util.UUID;
 public interface Player {
 	record PlayerID(UUID id, Integer index) {
 		@Override
-		public String toString() {
-			return "P" + index + " (" + id + ")";
-		}
+		public String toString() { return "P" + index + " (" + id + ")"; }
 	};
 	// Called when someone asks this player about a label
 	Hand getHand();

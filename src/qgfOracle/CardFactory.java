@@ -10,7 +10,5 @@ public class CardFactory {
 		this.suitIdSupplier = suitIdSupplier;
 	}
 
-	public Card createCard() {
-		return new Card(suitIdSupplier.get());
-	}
+	public Card createCard() { return new Card(suitIdSupplier.get()); }
 }
